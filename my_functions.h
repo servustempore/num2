@@ -2,7 +2,11 @@
 #define MY_FUNCTIONS
 
 #include <math.h>
-#define N 3 // not clever to define it here, but everything in num2 just serves proof of concept
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
+#define N 2000 // everything in num2 just serves proof of concept, so I define it here
+//#define PRINT
 
 void diag(double (*A)[N], double (*D)[N]){
 
@@ -52,6 +56,52 @@ void vecSubtract(double* A,double* B, double* dest){
 	for(int i = 0; i < N; i++){
 		dest[i] = A[i] - B[i];
 	}
+}
+
+void fillMatrix(double (*A)[N]){
+	int i, j;
+
+	srand((unsigned) time(NULL));
+
+	for(i = 0; i < N; i++){
+		for(j = 0; j < N; j++){
+			A[i][j] = ((rand() % 11)/(10*(double)N));
+		}
+	}
+
+	for(i = 0; i < N; i++){
+		A[i][i] = (rand()%10)+1;
+	}
+}
+
+void fillVector(double* vec){
+	int i;
+
+	srand((unsigned) time(NULL));
+
+	for(i = 0; i < N; i++){
+		vec[i] = rand() % 100;
+	}
+}
+
+void printMatrix(double (*A)[N]){
+	printf("=============================\nA =\n");
+
+	for(int i = 0; i < N; i++){
+		for(int j = 0; j < N; j++){
+			printf("%2.2f\t", A[i][j]);
+		}
+		printf("\n");
+	}
+}
+
+void printVector(double* vec, char x){
+	printf("============================\n%c =\n",x);
+
+	for(int i = 0; i < N; i++){
+		printf("%lf\n", vec[i]);
+	}
+
 }
 
 #endif
