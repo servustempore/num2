@@ -25,9 +25,7 @@ int main(void){
 	#endif
 
 	do{
-		for(i = 0; i < N; i++){
-			x_old[i] = x_new[i];	
-		}
+		copyVec(x_new, x_old);
 
 		for(i = 0; i < N; i++){
 			sum = 0;
