@@ -1,7 +1,7 @@
 /***********************************************************
 Gauß-Seidel-Iterationsverfahren
-- Unterscheidet sich von Jacobi im Hinblick das direkte einsetzen
-  neue berechneter Komponenten des iterierten Lösungsvektors,
+- Unterscheidet sich von Jacobi im Hinblick auf das direkte einsetzen
+  neu berechneter Komponenten des iterierten Lösungsvektors,
   statt diesen zuerst komplett zu bestimmen
 ***********************************************************/
 #include "my_functions.h"
