@@ -58,7 +58,7 @@ void vecSubtract(double* A,double* B, double* dest){
 	}
 }
 
-void fillMatrix(double (*A)[N]){
+void randMatrix(double (*A)[N]){
 	int i, j;
 
 	srand((unsigned) time(NULL));
@@ -74,7 +74,7 @@ void fillMatrix(double (*A)[N]){
 	}
 }
 
-void fillVector(double* vec){
+void randVector(double* vec){
 	int i;
 
 	srand((unsigned) time(NULL));

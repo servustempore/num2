@@ -16,8 +16,8 @@ int main(void){
 	double sum, residuum;
 	int i, j, count = 0;
 
-	fillMatrix(A);
-	fillVector(b);
+	randMatrix(A);
+	randVector(b);
 
 	#ifdef PRINT
 	printMatrix(A);
@@ -34,7 +34,7 @@ int main(void){
 			
 			for(j = 0; j < N; j++){
 				if(j != i)
-					sum += (A[i][j]*x_old[j]);			// x_new statt x_old!
+					sum += (A[i][j]*x_old[j]);
 			}
 
 			x_new[i] = 1/A[i][i] * (b[i] - sum);

@@ -5,7 +5,7 @@ Gauß-Seidel-Iterationsverfahren
   statt diesen zuerst komplett zu bestimmen
 ***********************************************************/
 #include "my_functions.h"
-  
+
 // define global variables to avoid stackoverflow (happens for very large
 // arrays)
 double A[N][N] = {0}; 
@@ -15,8 +15,8 @@ int main(void){
 	double sum, residuum;
 	int i, j, count = 0;
 
-	fillMatrix(A);
-	fillVector(b);
+	randMatrix(A);
+	randVector(b);
 
 	#ifdef PRINT
 	printMatrix(A);
